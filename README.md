@@ -1,17 +1,23 @@
-A Python program with a graphical user interface (GUI), Chan_model.py, has been developed to implement and reproduce Chan's model, a widely recognized approach for simulating the magnetic hysteresis behaviour of ferromagnetic cores. This tool provides the capability to simulate B-H loops (magnetic flux density vs. magnetic field intensity) in magnetic cores under various conditions, including configurations with and without an air gap. The program offers an intuitive interface that allows users to define key parameters, such as the core material properties, gap size, and excitation conditions. By leveraging Chan's model, it accurately predicts the nonlinear hysteresis behaviour of the core material, capturing essential features like coercivity, remanence, and saturation.
+This repository contains Python implementations of magnetic hysteresis models for simulating the nonlinear (B)-(H) behaviour of ferromagnetic cores. The programs include graphical user interfaces (GUIs) and are intended both for studying hysteresis models and for their practical application to magnetic-core and electromagnetic-actuator calculations.
 
-For more information on Chan's model, please refer to: https://ieeexplore.ieee.org/document/75630
+The repository currently contains two main implementations:
 
-This model is used for simulating non-linear behaviour of transformers in LTspice: https://www.allaboutcircuits.com/technical-articles/simulating-non-linear-transformers-in-ltspice/ See the attached report "A case study on magnetic cores_All.pdf".
+Chan-Model-Symmetrical-BHloops ---> This folder contains an implementation of Chan's hysteresis model, a widely known analytical approach for describing the nonlinear magnetic behaviour of ferromagnetic cores. The model is used to generate symmetrical major and minor (B)-(H) hysteresis loops, where (B) is the magnetic flux density and (H) is the magnetic field intensity. The Python program provides a graphical interface for specifying the principal parameters of the magnetic material and excitation conditions and for calculating and visualizing the resulting hysteresis trajectories. The model reproduces the principal characteristics of ferromagnetic hysteresis, including coercivity, remanence, nonlinear magnetization, and magnetic saturation. Chan's model is particularly attractive for engineering calculations because it provides a relatively simple analytical representation of the hysteresis loop while retaining the essential nonlinear properties of a ferromagnetic material.
 
-Output files of Chan_model.py (algorithm with GUI): "Ungapped_BH-loop_data.csv" and "Gapped_BH-loop_data.csv". Input parameters from the previous program run are saved in "simulation_log.log" (do not delete this file!) and can be called from GUI.
+Chan-Engelhardt-Model-Symmetrical&Asymmetrical-BHloops ---> This folder contains an extended implementation based on the Chan–Engelhardt approach. In addition to symmetrical hysteresis loops, this version is intended to reproduce asymmetrical major and minor (B)-(H) loops arising from arbitrary magnetization histories and reversal points. The implementation extends the basic Chan model by introducing the procedures required to construct hysteresis trajectories after field reversals while preserving the memory of the preceding magnetic state. This makes the model more suitable for simulations in which the magnetic core is subjected to non-symmetrical excitation, DC bias, partial magnetization cycles, or arbitrary sequences of field reversals.
 
-"A case study on magnetic cores_All.pdf" is the main report with all necessary files attached.
+Both implementations are intended to provide computationally efficient hysteresis models that can subsequently be incorporated into simulations of magnetic circuits, transformers, inductors, solenoids, and electromagnetic actuators.
 
-"Nonlinear_transformer_model_for_circuit_simulation.pdf" is the original Chan's paper
+References
 
-"Magnetic circuits.ppsx" is a Power Point Slide Show (PPS) on magnetic circuits for college students. It can be seen after downloading.
+The original Chan model is described in:
 
-"Introduction to electrodynamics.ppsx" is a Power Point Slide Show (PPS) on electromagnetic principles for college students. It can be seen after downloading.
+https://ieeexplore.ieee.org/document/75630
 
-The folder "LTspice_Non-linear_Transformer" contains the LTspice simulation file for a non-linear transformer. 
+A related application of Chan's model to the simulation of nonlinear transformers in LTspice is discussed here:
+
+https://www.allaboutcircuits.com/technical-articles/simulating-non-linear-transformers-in-ltspice/
+
+Additional theoretical background, details of the hysteresis models, and examples of their application are provided in the accompanying report:
+
+A case study on magnetic cores_All.pdf
