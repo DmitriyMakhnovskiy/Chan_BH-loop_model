@@ -10,12 +10,10 @@ Both implementations are intended to provide computationally efficient hysteresi
 
 References
 
-The original Chan model is described in:
+The original Chan model: https://ieeexplore.ieee.org/document/75630
 
-https://ieeexplore.ieee.org/document/75630
+A related application of Chan's model to the simulation of nonlinear transformers in LTspice: https://www.allaboutcircuits.com/technical-articles/simulating-non-linear-transformers-in-ltspice/
 
-A related application of Chan's model to the simulation of nonlinear transformers in LTspice is discussed here:
+Patent US7502723 "Asymmetric minor hysteresis loop model and circuit simulator including the same": https://patents.google.com/patent/US7502723B1/en
 
-https://www.allaboutcircuits.com/technical-articles/simulating-non-linear-transformers-in-ltspice/
-
-Additional theoretical background, details of the hysteresis models, and examples of their application are provided in the accompanying PDF reports and slide shows.
+Additional theoretical background on magnetic circuits, details of the hysteresis models, and examples of their application are provided in the accompanying PDF reports and PPT slide shows.
