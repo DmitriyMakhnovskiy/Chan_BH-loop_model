@@ -18,6 +18,4 @@ A related application of Chan's model to the simulation of nonlinear transformer
 
 https://www.allaboutcircuits.com/technical-articles/simulating-non-linear-transformers-in-ltspice/
 
-Additional theoretical background, details of the hysteresis models, and examples of their application are provided in the accompanying report:
-
-A case study on magnetic cores_All.pdf
+Additional theoretical background, details of the hysteresis models, and examples of their application are provided in the accompanying PDF reports and slide shows.
